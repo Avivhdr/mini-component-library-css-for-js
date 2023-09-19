@@ -55,12 +55,10 @@ const ProgressBar = ({ value, size }) => {
   }
 
   return (
-    <Wrapper style={wrapperStyles}>
+    <Wrapper style={wrapperStyles} aria-valuenow={value} role="progressbar" aria-label='progress bar' >
       <VisuallyHidden>{value}%</VisuallyHidden>
       <BarWrapper>
-        <Bar style={barStyles}>
-
-        </Bar>
+        <Bar style={barStyles} />
       </BarWrapper>
     </Wrapper>
   );
